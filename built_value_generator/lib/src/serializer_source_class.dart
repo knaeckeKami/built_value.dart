@@ -35,7 +35,6 @@ abstract class SerializerSourceClass
 
   SerializerSourceClass._();
 
-  @memoized
   ParsedLibraryResult get parsedLibrary =>
       parsedLibraryResultOrThrowingMock(element.library);
 
@@ -148,7 +147,6 @@ abstract class SerializerSourceClass
       !element.name.startsWith(r'_$') &&
       element.fields.any((field) => field.name == 'serializer');
 
-  @memoized
   BuiltList<SerializerSourceField> get fields {
     var result = ListBuilder<SerializerSourceField>();
     for (var fieldElement in collectFields(element)) {

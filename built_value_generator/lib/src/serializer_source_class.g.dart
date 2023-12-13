@@ -11,7 +11,6 @@ class _$SerializerSourceClass extends SerializerSourceClass {
   final InterfaceElement element;
   @override
   final ClassElement? builderElement;
-  ParsedLibraryResult? __parsedLibrary;
   BuiltValue? __builtValueSettings;
   bool? __hasBuilder;
   BuiltValueSerializer? __serializerSettings;
@@ -24,7 +23,6 @@ class _$SerializerSourceClass extends SerializerSourceClass {
   String? __genericBoundsOrObjectString;
   bool? __isBuiltValue;
   bool? __isEnumClass;
-  BuiltList<SerializerSourceField>? __fields;
   BuiltSet<SerializerSourceClass>? __fieldClasses;
   CompilationUnitElement? __compilationUnit;
   String? __serializerImplName;
@@ -42,10 +40,6 @@ class _$SerializerSourceClass extends SerializerSourceClass {
     BuiltValueNullFieldError.checkNotNull(
         element, r'SerializerSourceClass', 'element');
   }
-
-  @override
-  ParsedLibraryResult get parsedLibrary =>
-      __parsedLibrary ??= super.parsedLibrary;
 
   @override
   BuiltValue get builtValueSettings =>
@@ -89,9 +83,6 @@ class _$SerializerSourceClass extends SerializerSourceClass {
 
   @override
   bool get isEnumClass => __isEnumClass ??= super.isEnumClass;
-
-  @override
-  BuiltList<SerializerSourceField> get fields => __fields ??= super.fields;
 
   @override
   BuiltSet<SerializerSourceClass> get fieldClasses =>
